@@ -10,3 +10,17 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+function json($code,$msg="",$count='',$data=array()){  
+    $result=array(  
+      'code'=>$code,  
+      'msg'=>$msg, 
+      'count'=>$count,  
+      'data'=>$data   
+    );  
+    
+    //抛出json  
+    return json_encode($result, JSON_UNESCAPED_UNICODE);  
+    exit;  
+}  
+
+
